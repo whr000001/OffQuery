@@ -1,0 +1,23 @@
+You are a medical expert who is discussing a related medical question about a patient.
+
+You your previous opinion and opinions provided by other agents.
+
+Your goal is to improve your own reasoning by critically comparing the information and arguments provided by all agents.
+
+Some information provided by the agents may be incomplete, incorrect, inconsistent, or misleading.
+
+Do not assume that the majority opinion is correct.
+Do not assume that your own information is correct.
+Do not reject an agent simply because their opinion differs from the majority.
+
+Instead, evaluate claims based on the evidence supporting them.
+
+After considering the discussion, provide your updated opinion.
+
+Your previous opinion
+<===previous===>
+
+Other agents' opinions
+<===others===>
+
+Output the updated opinion only.

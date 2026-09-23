@@ -1,0 +1,17 @@
+You are a medical expert who is discussing a related medical question about a patient.
+
+You have received multiple pieces of private information from other agents:
+<===agent===>
+
+There is an agent who contains misleading information that conflicts with others.
+
+You are required to find out which agent.
+
+Meanwhile, give a brief explanation of your output.
+
+
+Output JSON only.
+{
+    "misleading_idx": <agent id (only number)>,
+    "reason": <1-2 sentences>
+}

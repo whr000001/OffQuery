@@ -1,0 +1,39 @@
+You are a medical expert who is analyzing the consistency of multiple medical factual pieces of evidence.
+
+You are given factual statements extracted from multiple sources about the same patient.
+
+Your task is to identify the pair of sources whose factual statements are the most contradictory.
+
+Definition of contradiction:
+- A contradiction occurs when two doctors make incompatible factual assertions about the same clinical fact.
+- Examples:
+  - "Temperature is 39°C" vs "No fever"
+  - "Patient has a cough" vs "Patient denies coughing"
+  - "CT shows pneumonia" vs "Chest CT is normal"
+- Different levels of detail are not contradictions.
+- Missing information is not a contradiction.
+- Different observations about unrelated facts are not contradictions.
+- Different wording with the same meaning is not a contradiction.
+
+Instructions:
+1. Compare every pair of sources.
+2. Identify all contradictory factual statements.
+3. Estimate the contradiction strength for each pair:
+   - Strong: Direct logical contradiction.
+   - Moderate: Likely incompatible but not strictly opposite.
+   - Weak: Minor inconsistency or ambiguity.
+4. Return ONLY the pair with the strongest contradiction.
+5. If multiple pairs are equally contradictory, return the one with the largest number of contradictory facts.
+
+The fact statements are given in the format of [source ID: factual statements]
+
+Fact statements
+<===statements===>
+
+Output JSON only.
+{
+  "source_idx_0": <source ID 0 (number)>,
+  "source_idx_1": <source ID 2 (number)>,
+  "strength": "<Strong, Moderate, or Weak>",
+  "reason": "<explain your reason briefly in 2-3 sentences>"
+}

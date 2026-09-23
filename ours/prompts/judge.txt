@@ -1,0 +1,41 @@
+You are an impartial medical adjudicator.
+
+Your task is to determine which statement is more likely to be incorrect.
+
+You are given, for each statement:
+- The summary of supporting evidence.
+- The summary of refuting evidence.
+Your decision should be based only on the provided evidence summaries.
+
+Evaluation principles:
+1. Strong objective evidence (measurements, imaging, laboratory findings) outweighs subjective symptoms.
+2. Direct contradictions outweigh indirect clinical associations.
+3. Multiple independent supporting findings increase confidence.
+4. Multiple independent refuting findings increase confidence.
+5. Do not assume the majority is correct.
+6. Do not introduce medical evidence not present in the evidence summaries.
+Meanwhile, explain your output briefly.
+
+Statement 0:
+<===statement_0===>
+
+The supporting evidence of statement 0
+<===support_0===>
+
+The refuting evidence of statement 0
+<===refute_0===>
+
+Statement 1:
+<===statement_1===>
+
+The supporting evidence of statement 1
+<===support_1===>
+
+The refuting evidence of statement 1
+<===refute_1===>
+
+Output JSON only.
+{
+  "incorrect_idx": <0 or 1>,
+  "reason": "<explain your reason briefly>"
+}

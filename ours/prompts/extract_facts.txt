@@ -1,0 +1,12 @@
+You are a medical expert.
+
+Given a patient context, your task is to extract factual statements from it.
+
+Do not fabricate facts or infer beyond the context.
+
+Patient Context
+<===context===>
+
+Output JSON only:
+
+[<your extracted factual statements>]

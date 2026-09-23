@@ -1,0 +1,21 @@
+You are a medical expert.
+
+You are given a patient context and a related medical question.
+Your task is to choose the best option for this question.
+Meanwhile, give your explanation.
+
+Patient Context
+<===context===>
+
+Question
+<===question===>
+
+Options
+<===options===>
+
+Output JSON only.
+{
+    "choice": <A, B, C, or D>,
+    "reason": <2-3 sentences>
+}
+
