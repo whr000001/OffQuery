@@ -387,17 +387,11 @@ def main():
     if not os.path.exists(f'res/{dataset_name}_{model}'):
         os.makedirs(f'res/{dataset_name}_{model}')
 
-    # for index in tqdm(indices):
-    #     print(index)
-    #     run_one(index, data[index])
-    # exit(0)
-
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = {
             executor.submit(run_one, index, data[index]): index
             for index in indices
         }
-        # tqdm 显示已经完成的 run 数量
         with tqdm(total=len(futures)) as pbar:
             for future in as_completed(futures):
                 index = futures[future]
@@ -408,13 +402,6 @@ def main():
                     print(f'\nError in index {index}: {e}')
 
                 pbar.update(1)
-
-    # for index in tqdm(indices):
-    #     if not os.path.exists(f'res/{dataset_name}_{model}/{index}'):
-    #         os.makedirs(f'res/{dataset_name}_{model}/{index}')
-    #     item = data[index]
-    #     run(item['unreliable_context'], item['shuffled_private_information'], item['question'], item['options'],
-    #         f'res/{dataset_name}_{model}/{index}')
 
 
 if __name__ == '__main__':

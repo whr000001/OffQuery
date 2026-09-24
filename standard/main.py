@@ -178,7 +178,6 @@ def main():
             executor.submit(run_one, index, data[index]): index
             for index in indices
         }
-        # tqdm 显示已经完成的 run 数量
         with tqdm(total=len(futures)) as pbar:
             for future in as_completed(futures):
                 index = futures[future]
