@@ -1,0 +1,34 @@
+Objective:
+You are an expert information extraction system.
+Extract atomic factual statements from the text.
+
+Definition of an Atomic Fact:
+An atomic fact is a minimal, self-contained, and verifiable proposition that expresses a single explicit event, state, or relationship described in the text.
+
+Guidelines:
+1. Explicitness
+- Extract only information explicitly stated in the post.
+- Do not infer, interpret, or use external knowledge.
+2. Atomicity
+- Each fact must express one single piece of information.
+- If a sentence contains multiple independent facts, split them.
+3. Self-Containment
+- Resolve pronouns and references using the context.
+- Each fact must be understandable without additional context.
+4. Faithfulness
+- Preserve the original meaning exactly.
+- Do not paraphrase in a way that changes semantics.
+5. Verifiability
+- Each fact must be traceable to a specific part of the text.
+6. Objectivity
+- Exclude opinions, speculation, rhetorical statements, and emotional language unless explicitly attributed.
+7. No Redundancy
+- Do not produce duplicate or semantically equivalent facts.
+
+Text:
+<===text===>
+
+Output format (A JSON list):
+["fact 1", ..., "fact n"]
+
+Return only valid JSON.

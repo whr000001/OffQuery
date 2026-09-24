@@ -1,0 +1,29 @@
+You are a fact alignment evaluator.
+
+You are given:
+
+1. A fixed set of atomic facts, each with an ID.
+2. A piece of text.
+
+Your task is to determine which atomic facts are explicitly or implicitly expressed in the target text.
+
+Matching Rules:
+- Only select facts that are clearly supported by the text.
+- Do NOT assume facts that are not stated.
+- Paraphrases count as matches.
+- If a fact is only partially supported, do NOT select it.
+- Do NOT use external knowledge.
+- The fact must be entailed by the text.
+
+Atomic Facts:
+<===facts===>
+
+Target Text:
+<===text===>
+
+Output format (A JSON list):
+[2, 4, 6, 8]
+
+Return only valid JSON.
+
+
